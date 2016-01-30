@@ -52,7 +52,7 @@ class Environment
      */
     private function runningOnTravisCI()
     {
-        var_dump($_ENV);
-        return isset($_ENV['TRAVIS']);
+        var_dump(getenv('TRAVIS'));
+        return (getenv('TRAVIS') == 'true');
     }
 }
