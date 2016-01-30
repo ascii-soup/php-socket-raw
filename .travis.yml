@@ -6,5 +6,5 @@ php:
 before_script:
   - composer install --dev --dev --prefer-source --no-interaction
 script:
-  - =`which phpunit`
+  - phpunit=`which phpunit`
   - sudo $phpunit --coverage-text || ([[ $? = 139 ]] && echo && echo "Ignoring SEGFAULT.." >&2)
